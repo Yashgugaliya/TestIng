@@ -4,7 +4,18 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+ext.versionMajor = 1
+ext.versionMinor = 1
+ext.versionPatch = 6
+ext.versionBuild = 20
 
+def computeVersionName() {
+    return "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
+}
+
+def computeVersionNumber() {
+    return versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+}
 android {
     compileSdk 32
     flavorDimensions "version"
@@ -13,8 +24,8 @@ android {
         applicationId "com.example.testing"
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode computeVersionNumber()
+        versionName computeVersionName()
         flavorDimensions "version"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
