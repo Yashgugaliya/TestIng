@@ -7,7 +7,7 @@ plugins {
 ext.versionMajor = 1
 ext.versionMinor = 1
 ext.versionPatch = 6
-ext.versionBuild = 20
+ext.versionBuild = 21
 
 def computeVersionName() {
     return "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
@@ -76,6 +76,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
