@@ -7,7 +7,7 @@ plugins {
 ext.versionMajor = 1
 ext.versionMinor = 1
 ext.versionPatch = 6
-ext.versionBuild = 20
+ext.versionBuild = 21
 
 def computeVersionName() {
     return "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
@@ -59,6 +59,7 @@ android {
             variant.resValue("string","firebaseChatBaseUrl","https://winuall-connect-chat-db.firebaseio.com")
             variant.resValue("string","firebaseUserListUrl","https://winuall-connect-chatprofiledb.firebaseio.com")
             variant.resValue("string", "introsliders", serviceMap.get(flavor.name))
+            //variant.resValue("color", "purple_500", "#FF000000")
             //variant.resValue("string", "siteBaseUrl", serviceMap.get(flavor.name + "site_base_url"))
             //implementation serviceMap.get(flavor.name + "site")
             //variant.resValue("bool", "introsliders", serviceMap.get(flavor.name))
@@ -76,6 +77,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
