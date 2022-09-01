@@ -10,6 +10,7 @@
       "playstore_account": "hopelabs",
       "introsliders": "false",
       "site_base_url": "kingslive.winuall.com",
+      "color_url": "https://winuallpdffiles.blob.core.windows.net/saasfiles/1661492397808.xml",
       "dependency" : ["com.airbnb.android:lottie:4.2.2", "com.github.skydoves:transformationlayout:1.1.1"]
     }
   ]
