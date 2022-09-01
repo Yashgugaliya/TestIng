@@ -28,7 +28,7 @@ class SplashScreenActivity : AppCompatActivity() {
         handler.postDelayed(runnable, SPLASH_DELAY)
     }
     private fun redirect() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this@SplashScreenActivity, com.example.pluginlibrary.MainActivity::class.java)
         startActivity(intent)
     }
 }
