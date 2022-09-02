@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pluginlibrary">
 
-    <application
-        android:theme="@style/Theme.TestIng">
+    <application android:theme="@style/Theme.test">
+        <activity
+            android:name=".PluginSecondActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
